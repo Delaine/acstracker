@@ -1,0 +1,16 @@
+<h1>All Jobs</h1>
+
+<ul id="jobs">
+	<% @jobs.each do |job| %>
+		<li>
+			<%= link_to job.name, job_path(job) %>
+			<%= job.tech_number %>
+			<%= job.account_number %>
+			<%= job.points %>
+			<%= job.date %>
+			<%= job.finding_code %>
+		</li>
+	<% end %>
+</ul>
+
+<%= link_to "Create a New Job", new_job_path, class: "new_job" %>
