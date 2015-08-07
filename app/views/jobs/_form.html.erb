@@ -1,0 +1,35 @@
+
+<%= form_for(@job) do |f| %>
+  <ul>
+  <% @job.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+  <p>
+    <%= f.label :customer_name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :tech_number %><br />
+    <%= f.text_field :tech_number %>
+  </p>
+  <p>
+    <%= f.label :account_number %><br />
+    <%= f.text_field :account_number %>
+  </p>
+  <p>
+    <%= f.label :job_points %><br />
+    <%= f.text_field :points %>
+  </p>
+  <p>
+    <%= f.label :todays_date %><br />
+    <%= f.text_field :date %>
+  </p>
+  <p>
+    <%= f.label :finding_code %><br />
+    <%= f.text_field :finding_code %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

@@ -5,3 +5,5 @@
 <p><%= @job.date %></p>
 <p><%= @job.finding_code %></p>
 <%= link_to "<< Back to Jobs List", jobs_path %>
+<%= link_to "delete", job_path(@job), method: :delete, data: {confirm: "Really delete the job?"} %>
+<%= link_to "edit", edit_job_path(@job) %>
